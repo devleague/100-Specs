@@ -292,7 +292,9 @@ function sahara_river () {
  * @return {Number}
  *
  */
-
+function addNumbers (a, b) {
+	return a + b;
+}
 
 /* Step 22
  *
@@ -305,7 +307,13 @@ function sahara_river () {
  * @return {Bool}
  *
  */
-
+function installLinux (linux) {
+	if (linuxFlavors.indexOf(linux) !== -1) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /* Step 23
  *
@@ -324,7 +332,9 @@ function sahara_river () {
  * @return {Bool when False, String when True}
  *
  */
-
+function drink (beer) {
+	
+}
 
 /* Step 24
  *

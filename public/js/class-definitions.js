@@ -1,3 +1,5 @@
+var unicorn = null;
+
 /* Step 1
  *
  * Declare a variable named "unicorn"
@@ -5,7 +7,7 @@
  *
  */
 
-
+var videogame_system = "Atari";
 /* Step 2
  *
  * Declare a variable named "videogame_system"
@@ -13,14 +15,14 @@
  *
  */
 
-
+var sahara_animal = "The Addax";
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
 /* Step 4
  *
@@ -30,7 +32,7 @@
  * Capitalize the names.
  */
 
-
+var galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"];
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
@@ -39,7 +41,7 @@
  *
  */
 
-
+var golden_ratio = 1.61803398874;
 /* Step 6 φ
  *
  * Declare a variable named "golden_ratio"
@@ -47,7 +49,7 @@
  *
  */
 
-
+var earths_water_composition = 0.71;
 /* Step 7
  *
  * Declare a variable named "earths_water_composition"
@@ -55,14 +57,13 @@
  *
  */
 
-
+var club_name = "Fight Club";
 /* Step 8
  *
  * Declare a variable named "club_name"
  * and assign the value of club_name to "Fight Club"
  *
  */
-
 
 /* Step 9
  *

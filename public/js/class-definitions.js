@@ -54,7 +54,7 @@ var golden_ratio = 1.61803398874;
  * and assign the value of earths_water_composition to 0.71
  *
  */
-
+var earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -62,7 +62,7 @@ var golden_ratio = 1.61803398874;
  * and assign the value of club_name to "Fight Club"
  *
  */
-
+var club_name = 'Fight Club';
 
 /* Step 9
  *
@@ -73,7 +73,11 @@ var golden_ratio = 1.61803398874;
  *   male    => "male"
  *   unknown => undefined
  */
-
+var gender = {
+	female : "female",
+	male : "male",
+	unknown : undefined
+};
 
 /* Step 10
  *
@@ -87,7 +91,12 @@ var golden_ratio = 1.61803398874;
  *   gender  => gender.female
  *
  */
-
+var princess_leia = {
+	name : "Leia Organa",
+	money : 890,
+	age : 20,
+	gender : gender.female
+};
 
 /* Step 11
  *
@@ -100,7 +109,12 @@ var golden_ratio = 1.61803398874;
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+var domains = {
+	'ycombinator.com' : "198.41.190.47",
+	'laughingsquid.com' : "162.159.247.97",
+	'slumlordhosting.com' : "198.61.179.126",
+	'jsonformatter.curiousconcept.com' : "104.28.5.70"
+};
 
 /* Step 12
  *
@@ -115,7 +129,14 @@ var golden_ratio = 1.61803398874;
  *   Konqueror  => "konqueror.org"
  *
  */
-
+var browsers = {
+	Chromium : "google.com",
+	Safari : "apple.com",
+	Opera : "opera.com",
+	Firefox : "mozilla.org",
+	Sleipnir : "fenrir-inc.com",
+	Konqueror : "konqueror.org"
+};
 
 /* Step 13
  *
@@ -133,7 +154,18 @@ var golden_ratio = 1.61803398874;
  *  isDouble  => true
  *
  */
-
+var rainbow = {
+	colors : {
+		red : "#F0280A",
+		orange : "#FF8800",
+		yellow : "#FFDD00",
+		green : "#51AB0C",
+		blue : "#1593ED",
+		indigo : "#5215ED",
+		violet : "#A915ED"
+	},
+	isDouble : true
+};
 
 /* Step 14
  *
@@ -148,7 +180,7 @@ var golden_ratio = 1.61803398874;
  * "Bieber Linux"
  *
  */
-
+var linuxFlavors = ["Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieber Linux"];
 
 /* Step 15
  *
@@ -162,7 +194,7 @@ var golden_ratio = 1.61803398874;
  * "cytosine"
  *
  */
-
+var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
 
 /* Step 16
  *
@@ -175,7 +207,12 @@ var golden_ratio = 1.61803398874;
  * Surface      => 320
  *
  */
-
+var laptopCosts = {
+	MacBook : 1500,
+	Alienware : 2500,
+	HP : 499,
+	Surface : 320
+};
 
 /* Step 17
  *
@@ -191,7 +228,7 @@ var golden_ratio = 1.61803398874;
  * "Species"
  *
  */
-
+var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
 
 /* Step 18
  *
@@ -205,7 +242,7 @@ var golden_ratio = 1.61803398874;
  * "cvs"
  *
  */
-
+var scmList = ["git", "svn", "mercurial", "bazaar", "cvs"];
 
 /* Step 19
  *
@@ -224,7 +261,14 @@ var golden_ratio = 1.61803398874;
  *                  "Golden"
  *
  */
-
+var beers = {
+	IPA : "Ale",
+	Lager : "Strong",
+	Heffeweisen : "German",
+	Stout : ["Thick", "Dark"],
+	Porter : "Bitter",
+	Ale : ["Light", "Golden"]
+};
 
 /* Step 20
  *
@@ -234,7 +278,9 @@ var golden_ratio = 1.61803398874;
  * @return {String}
  *
  */
-
+function sahara_river () {
+	return "Nile River";
+}
 
 /* Step 21
  *

@@ -65,6 +65,7 @@ var club_name = "Fight Club";
  *
  */
 
+var gender = {female: "female", male: "male", unknown: undefined};
 /* Step 9
  *
  * Define a literal object named "gender"
@@ -75,6 +76,7 @@ var club_name = "Fight Club";
  *   unknown => undefined
  */
 
+var princess_leia = {name: "Leia Organa", money: 890, age: 20, gender: gender.female};
 
 /* Step 10
  *
@@ -88,8 +90,9 @@ var club_name = "Fight Club";
  *   gender  => gender.female
  *
  */
-
-
+var domains = {'ycombinator.com': "198.41.190.47", 'laughingsquid.com': "162.159.247.97",
+ 'slumlordhosting.com': "198.61.179.126",
+ 'jsonformatter.curiousconcept.com': "104.28.5.70"};
 /* Step 11
  *
  * Define a literal object named "domains"
@@ -101,7 +104,10 @@ var club_name = "Fight Club";
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+var browsers = {Chromium: "google.com", Safari: "apple.com", 
+	Opera: "opera.com", Firefox: "mozilla.org", 
+	Sleipnir: "fenrir-inc.com", Konqueror: "konqueror.org"
+};
 
 /* Step 12
  *
@@ -116,6 +122,14 @@ var club_name = "Fight Club";
  *   Konqueror  => "konqueror.org"
  *
  */
+var rainbow = {colors: {red: "#F0280A", orange: "#FF8800", 
+yellow: "#FFDD00", green: "#51AB0C", blue: "#1593ED",
+indigo: "#5215ED", violet: "#A915ED"
+},
+isDouble: true
+};
+
+
 
 
 /* Step 13
@@ -135,6 +149,8 @@ var club_name = "Fight Club";
  *
  */
 
+var linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware',
+'Red Hat', 'Bieber Linux'];
 
 /* Step 14
  *
@@ -150,6 +166,8 @@ var club_name = "Fight Club";
  *
  */
 
+var DNA = ["nucleatides", "guanine", "adenine","thymine", 
+"cytosine"];
 
 /* Step 15
  *
@@ -163,7 +181,8 @@ var club_name = "Fight Club";
  * "cytosine"
  *
  */
-
+var laptopCosts = {MacBook: 1500, Alienware: 2500, 
+	HP: 499, Surface: 320};
 
 /* Step 16
  *
@@ -177,6 +196,8 @@ var club_name = "Fight Club";
  *
  */
 
+var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class',
+'Order', 'Family', 'Genus', 'Species'];
 
 /* Step 17
  *
@@ -193,6 +214,8 @@ var club_name = "Fight Club";
  *
  */
 
+var scmList = ['git', 'svn', 'mercurial', 'bazaar',
+'cvs'];
 
 /* Step 18
  *
@@ -206,7 +229,10 @@ var club_name = "Fight Club";
  * "cvs"
  *
  */
-
+var beers = {IPA: "Ale", Lager: "Strong",
+Heffeweisen: "German", Stout: ["Thick", "Dark"], 
+Porter: "Bitter", Ale: ["Light","Golden"]
+};
 
 /* Step 19
  *
@@ -225,6 +251,9 @@ var club_name = "Fight Club";
  *                  "Golden"
  *
  */
+var sahara_river = function() {
+	return 'Nile River';
+};
 
 
 /* Step 20
@@ -235,7 +264,14 @@ var club_name = "Fight Club";
  * @return {String}
  *
  */
+addNumbers();
+function addNumbers(){
+	x = 1;
+	y = 2;
+	sum = (x+y);
+	return sum;
 
+}
 
 /* Step 21
  *

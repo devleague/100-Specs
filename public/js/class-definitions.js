@@ -369,15 +369,18 @@ function installLinux (Linux) {
  */
 
 
- // function drink ( type, beerDescription, beerDescription1, beerDescription2 ){
- // 	if(!beers[type]){
- // 			return false;
-	// } else {
-	// 	return "This " + type + "is " + beerDescription, 
-	// 	"This " + type is + beerDescription1} + "and " + beerDescription2;
-	// }
-
-
+ function drink (type){
+ 	var descriptions = beers[type];
+ 	if(!beers[type]){
+ 			return false;
+	} else {
+		if (typeof descriptions === "string"){			
+			return "This " + type + " is " + descriptions + ".";
+		} 
+		return "This " + type + " is " + descriptions[0] + " and " + descriptions[1] + ".";
+		
+	}
+}
 /* Step 23
  *
  * Define a function named "drink" that takes
@@ -395,14 +398,19 @@ function installLinux (Linux) {
  * @return {Bool when False, String when True}
  *
  */
-function browseURL (browsers){
-	if(!browsers) {
-		return true;
+
+function browseURL (browser){
+	var URL = browsers[browser];
+	if(typeof browser !== "string") {
+		return false;
 	} else {
+		if (typeof URL === "string" ){
+			return URL;
+		}
 		return false;
 	}
-
 }
+
 
 /* Step 24
  *
@@ -416,6 +424,12 @@ function browseURL (browsers){
  *
  */
 
+
+
+
+// function listLivingOrgClass () {
+// 	return 
+// }
 
 /* Step 25
  *

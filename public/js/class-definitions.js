@@ -253,7 +253,7 @@ var scmList = ["git", "svn", "mercurial", "bazaar", "cvs"];
  * Lager        => "Strong"
  * Heffeweisen  => "German"
  * Stout        => [Array]
- *                  "Thick"
+ *                  "Thick"	
  *                  "Dark"
  * Porter       => "Bitter"
  * Ale          => [Array]
@@ -332,9 +332,18 @@ function installLinux (linux) {
  * @return {Bool when False, String when True}
  *
  */
-function drink (beer) {
-	
+function drink (beerType) {
+	if (!beers[beerType]) {
+			return false;
+		} else if (typeof beers[beerType] === 'string') {
+			return 'This ' + beerType + ' is ' + beers[beerType] + '.';
+		} else {
+			if (typeof beers[beerType] === 'object') {
+			return 'This ' + beerType + ' is ' + beers[beerType][0] + ' and ' + beers[beerType][1] + '.';
+		}
+	}
 }
+
 
 /* Step 24
  *
@@ -347,7 +356,15 @@ function drink (beer) {
  * @return {String if true else return false}
  *
  */
-
+function browseURL (browserType) {
+	if (!browsers[browserType]) {
+		return false;
+	} else {
+		if (browsers[browserType]) {
+			return browsers[browserType];
+		}
+	}
+}
 
 /* Step 25
  *

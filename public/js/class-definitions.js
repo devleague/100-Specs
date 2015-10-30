@@ -22,7 +22,16 @@ var sahara_animal = "The Addax";
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+var planets = [
+	"Mercury", 
+	"Venus", 
+	"Earth", 
+	"Mars", 
+	"Jupiter", 
+	"Saturn", 
+	"Uranus", 
+	"Neptune"
+	];
 
 /* Step 4
  *
@@ -32,7 +41,12 @@ var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus
  * Capitalize the names.
  */
 
-var galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"];
+var galilean_moons = [
+	"Io", 
+	"Europa", 
+	"Ganymede", 
+	"Callisto"
+	];
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
@@ -65,7 +79,11 @@ var club_name = "Fight Club";
  *
  */
 
-var gender = {female: "female", male: "male", unknown: undefined};
+var gender = {
+	female: "female", 
+	male: "male", 
+	unknown: undefined
+};
 /* Step 9
  *
  * Define a literal object named "gender"
@@ -76,7 +94,12 @@ var gender = {female: "female", male: "male", unknown: undefined};
  *   unknown => undefined
  */
 
-var princess_leia = {name: "Leia Organa", money: 890, age: 20, gender: gender.female};
+var princess_leia = {
+	name: "Leia Organa", 
+	money: 890, 
+	age: 20, 
+	gender: gender.female
+};
 
 /* Step 10
  *
@@ -90,9 +113,12 @@ var princess_leia = {name: "Leia Organa", money: 890, age: 20, gender: gender.fe
  *   gender  => gender.female
  *
  */
-var domains = {'ycombinator.com': "198.41.190.47", 'laughingsquid.com': "162.159.247.97",
- 'slumlordhosting.com': "198.61.179.126",
- 'jsonformatter.curiousconcept.com': "104.28.5.70"};
+var domains = {
+	'ycombinator.com': "198.41.190.47", 
+	'laughingsquid.com': "162.159.247.97",
+ 	'slumlordhosting.com': "198.61.179.126",
+ 	'jsonformatter.curiousconcept.com': "104.28.5.70"
+ };
 /* Step 11
  *
  * Define a literal object named "domains"
@@ -104,9 +130,13 @@ var domains = {'ycombinator.com': "198.41.190.47", 'laughingsquid.com': "162.159
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-var browsers = {Chromium: "google.com", Safari: "apple.com", 
-	Opera: "opera.com", Firefox: "mozilla.org", 
-	Sleipnir: "fenrir-inc.com", Konqueror: "konqueror.org"
+var browsers = {
+	Chromium: "google.com", 
+	Safari: "apple.com", 
+	Opera: "opera.com", 
+	Firefox: "mozilla.org", 
+	Sleipnir: "fenrir-inc.com", 
+	Konqueror: "konqueror.org"
 };
 
 /* Step 12
@@ -122,9 +152,15 @@ var browsers = {Chromium: "google.com", Safari: "apple.com",
  *   Konqueror  => "konqueror.org"
  *
  */
-var rainbow = {colors: {red: "#F0280A", orange: "#FF8800", 
-yellow: "#FFDD00", green: "#51AB0C", blue: "#1593ED",
-indigo: "#5215ED", violet: "#A915ED"
+var rainbow = {
+	colors: {
+		red: "#F0280A", 
+		orange: "#FF8800", 
+		yellow: "#FFDD00", 
+		green: "#51AB0C", 
+		blue: "#1593ED",
+		indigo: "#5215ED", 
+		violet: "#A915ED"
 },
 isDouble: true
 };
@@ -149,8 +185,14 @@ isDouble: true
  *
  */
 
-var linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware',
-'Red Hat', 'Bieber Linux'];
+var linuxFlavors = [
+	'Gentoo', 
+	'Fedora', 
+	'Debian', 
+	'Slackware',
+	'Red Hat', 
+	'Bieber Linux'
+	];
 
 /* Step 14
  *
@@ -166,8 +208,13 @@ var linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware',
  *
  */
 
-var DNA = ["nucleatides", "guanine", "adenine","thymine", 
-"cytosine"];
+var DNA = [
+"nucleatides", 
+"guanine", 
+"adenine",
+"thymine", 
+"cytosine"
+];
 
 /* Step 15
  *
@@ -181,8 +228,11 @@ var DNA = ["nucleatides", "guanine", "adenine","thymine",
  * "cytosine"
  *
  */
-var laptopCosts = {MacBook: 1500, Alienware: 2500, 
-	HP: 499, Surface: 320};
+var laptopCosts = {
+	MacBook: 1500, 
+	Alienware: 2500, 
+	HP: 499, 
+	Surface: 320};
 
 /* Step 16
  *
@@ -196,8 +246,14 @@ var laptopCosts = {MacBook: 1500, Alienware: 2500,
  *
  */
 
-var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class',
-'Order', 'Family', 'Genus', 'Species'];
+var livingOrganismClassification = [
+'Kingdom', 
+'Phylum', 
+'Class',
+'Order', 
+'Family', 
+'Genus', 
+'Species'];
 
 /* Step 17
  *
@@ -214,7 +270,11 @@ var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class',
  *
  */
 
-var scmList = ['git', 'svn', 'mercurial', 'bazaar',
+var scmList = [
+'git', 
+'svn', 
+'mercurial', 
+'bazaar',
 'cvs'];
 
 /* Step 18
@@ -229,9 +289,13 @@ var scmList = ['git', 'svn', 'mercurial', 'bazaar',
  * "cvs"
  *
  */
-var beers = {IPA: "Ale", Lager: "Strong",
-Heffeweisen: "German", Stout: ["Thick", "Dark"], 
-Porter: "Bitter", Ale: ["Light","Golden"]
+var beers = {
+	IPA: "Ale", 
+	Lager: "Strong",
+	Heffeweisen: "German", 
+	Stout: ["Thick", "Dark"], 
+	Porter: "Bitter", 
+	Ale: ["Light","Golden"]
 };
 
 /* Step 19
@@ -264,13 +328,9 @@ var sahara_river = function() {
  * @return {String}
  *
  */
-addNumbers();
-function addNumbers(){
-	x = 1;
-	y = 2;
-	sum = (x+y);
-	return sum;
-
+function addNumbers(x,y){
+	
+	return x + y;
 }
 
 /* Step 21
@@ -284,6 +344,17 @@ function addNumbers(){
  *
  */
 
+function installLinux (Linux) {
+	if (linuxFlavors.indexOf(Linux) > -1) {
+		return true;
+
+	} 
+		else {
+		
+		return false;
+	
+	}
+}
 
 /* Step 22
  *
@@ -296,6 +367,15 @@ function addNumbers(){
  * @return {Bool}
  *
  */
+
+
+ // function drink ( type, beerDescription, beerDescription1, beerDescription2 ){
+ // 	if(!beers[type]){
+ // 			return false;
+	// } else {
+	// 	return "This " + type + "is " + beerDescription, 
+	// 	"This " + type is + beerDescription1} + "and " + beerDescription2;
+	// }
 
 
 /* Step 23
@@ -315,7 +395,14 @@ function addNumbers(){
  * @return {Bool when False, String when True}
  *
  */
+function browseURL (browsers){
+	if(!browsers) {
+		return true;
+	} else {
+		return false;
+	}
 
+}
 
 /* Step 24
  *

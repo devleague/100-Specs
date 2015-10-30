@@ -375,7 +375,16 @@ function browseURL (browserType) {
  * @return {String}
  *
  */
-
+function listLivingOrgClass () {
+	var ul = document.createElement('ul');
+	for (var i = 0; i <= livingOrganismClassification.length; i++) {
+		var livingOrg = livingOrganismClassification[i];
+		var newList = document.createElement('li');
+		newList.innerHTML = livingOrg;
+		ul.appendChild(newList);
+	}
+	return ul.outerHTML;
+}
 
 /* Step 26
  *
@@ -396,7 +405,14 @@ function browseURL (browserType) {
  * @return {String}
  *
  */
-
+function favoritePlanet (favPlanet) {
+	if (!planets[favPlanet]) {
+		return favPlanet + " is not a planet!";
+	} else {
+		var ranPlanet = planets[Math.floor(Math.random() * planets.length)];
+			return 'I\'m from ' + favPlanet + ', but I wish I could go to ' + ranPlanet + '.';
+	}
+}
 
 /* Step 27
  *

@@ -405,12 +405,12 @@ function listLivingOrgClass () {
  * @return {String}
  *
  */
-function favoritePlanet (favPlanet) {
-	if (!planets[favPlanet]) {
-		return favPlanet + " is not a planet!";
+function favoritePlanet (currentPlanet) {
+	if (!planets[currentPlanet]) {
+		return currentPlanet + " is not a planet!";
 	} else {
 		var ranPlanet = planets[Math.floor(Math.random() * planets.length)];
-			return 'I\'m from ' + favPlanet + ', but I wish I could go to ' + ranPlanet + '.';
+			return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + ranPlanet + '.';
 	}
 }
 

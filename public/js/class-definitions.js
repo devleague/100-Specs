@@ -4,6 +4,7 @@
  * then set it's value to null;
  *
  */
+ var unicorn = null;
 
 
 /* Step 2
@@ -12,7 +13,7 @@
  * then assign it to be the value of "Atari"
  *
  */
-
+var videogame_system = "Atari";
 
 /* Step 3
  *
@@ -20,7 +21,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+ var sahara_animal = "The Addax";
 
 /* Step 4
  *
@@ -30,7 +31,7 @@
  * Capitalize the names.
  */
 
-
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
@@ -38,7 +39,7 @@
  * each galilean moon of Jupiter
  *
  */
-
+var galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"];
 
 /* Step 6 φ
  *
@@ -46,7 +47,7 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-
+var golden_ratio = 1.61803398874;
 
 /* Step 7
  *
@@ -54,7 +55,7 @@
  * and assign the value of earths_water_composition to 0.71
  *
  */
-
+var earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -62,7 +63,7 @@
  * and assign the value of club_name to "Fight Club"
  *
  */
-
+var club_name = "Fight Club";
 
 /* Step 9
  *
@@ -73,7 +74,7 @@
  *   male    => "male"
  *   unknown => undefined
  */
-
+var gender = {female: "female", male: "male", unknown: undefined};
 
 /* Step 10
  *
@@ -87,7 +88,7 @@
  *   gender  => gender.female
  *
  */
-
+var princess_leia = {name: "Leia Organa", money: 890, age: 20, gender: gender.female};
 
 /* Step 11
  *
@@ -100,7 +101,11 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+var domains = {
+	"ycombinator.com": "198.41.190.47", 
+	"laughingsquid.com": "162.159.247.97", 
+	"slumlordhosting.com": "198.61.179.126", 
+	"jsonformatter.curiousconcept.com": "104.28.5.70"};
 
 /* Step 12
  *
@@ -115,7 +120,14 @@
  *   Konqueror  => "konqueror.org"
  *
  */
-
+var browsers = {
+		Chromium: "google.com",
+		Safari: "apple.com",
+        Opera: "opera.com",
+        Firefox: "mozilla.org",
+        Sleipnir: "fenrir-inc.com",
+        Konqueror: "konqueror.org"
+};
 
 /* Step 13
  *
@@ -134,6 +146,18 @@
  *
  */
 
+var rainbow = {
+  colors: {
+         red: "#F0280A",
+         orange: "#FF8800",
+         yellow: "#FFDD00",
+         green: "#51AB0C",
+         blue: "#1593ED",
+         indigo: "#5215ED",
+         violet: "#A915ED"},
+         isDouble: true
+        
+};
 
 /* Step 14
  *
@@ -148,6 +172,13 @@
  * "Bieber Linux"
  *
  */
+ var linuxFlavors = 
+[ "Gentoo",
+  "Fedora",
+  "Debian",
+  "Slackware",
+  "Red Hat",
+  "Bieber Linux" ];
 
 
 /* Step 15
@@ -162,7 +193,12 @@
  * "cytosine"
  *
  */
-
+ var DNA = [
+ "nucleatides",
+  "guanine",
+  "adenine",
+  "thymine",
+  "cytosine"];
 
 /* Step 16
  *
@@ -175,8 +211,12 @@
  * Surface      => 320
  *
  */
-
-
+var laptopCosts = {
+ MacBook: 1500,
+ Alienware: 2500,
+ HP: 499,
+ Surface: 320
+};
 /* Step 17
  *
  * Declare an array named "livingOrganismClassification"
@@ -192,7 +232,14 @@
  *
  */
 
-
+var livingOrganismClassification = [
+	"Kingdom",
+	"Phylum",
+	"Class",
+	"Order",
+	"Family",
+	"Genus",
+	"Species"];
 /* Step 18
  *
  * Declare an array named "scmList" with
@@ -206,6 +253,12 @@
  *
  */
 
+var scmList = [
+	"git",
+	"svn",
+	"mercurial",
+	"bazaar",
+	"cvs"];
 
 /* Step 19
  *
@@ -224,7 +277,14 @@
  *                  "Golden"
  *
  */
-
+ var beers = {
+	IPA: "Ale",
+	Lager: "Strong",
+	Heffeweisen: "German",
+	Stout: ["Thick", "Dark"],
+	Porter:"Bitter",
+	Ale: ["Light", "Golden"]
+	};
 
 /* Step 20
  *
@@ -234,7 +294,9 @@
  * @return {String}
  *
  */
-
+function sahara_river() {
+	return 'Nile River';
+}
 
 /* Step 21
  *
@@ -246,7 +308,10 @@
  * @return {Number}
  *
  */
-
+function addNumbers(Number1, Number2) {
+	var Sum = Number1 + Number2;
+	return Sum;
+}
 
 /* Step 22
  *
@@ -259,8 +324,17 @@
  * @return {Bool}
  *
  */
+function installLinux(Linux) {
+	if (linuxFlavors.IndexOf(Linux) > -1) {
 
+			return true;
+	}
+		else {
 
+			return false;
+	}	
+
+}
 /* Step 23
  *
  * Define a function named "drink" that takes

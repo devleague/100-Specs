@@ -426,11 +426,6 @@ function browseURL (browser){
 
 
 
-
-// function listLivingOrgClass () {
-// 	return 
-// }
-
 /* Step 25
  *
  * Define a function named "listLivingOrgClass" that
@@ -438,9 +433,18 @@ function browseURL (browser){
  * living organism classifications as an list element(<li>)
  *
  * @return {String}
- *
- */
+ * 
+ */ 
 
+
+function listLivingOrgClass () {
+	var results = "<ul>";
+	for (var i = 0; i < livingOrganismClassification.length; i++) {
+		results += "<li>" + livingOrganismClassification[i] + "</li>"; 
+	}
+	results += "</ul>";
+	return results;
+}
 
 /* Step 26
  *
@@ -461,7 +465,9 @@ function browseURL (browser){
  * @return {String}
  *
  */
+function favoritePlanet () {
 
+}
 
 /* Step 27
  *

@@ -451,7 +451,15 @@ function favoritePlanet (currentPlanet) {
  * @return {String}
  *
  */
-
+function purchaseLaptop (laptop) {
+	if (!laptopCosts[laptop]) {
+		return -1;
+	} else { 
+      if (typeof laptopCosts[laptop] === 'number') {
+        return laptopCosts[laptop].toString();
+      }
+	}
+}
 
 /* Step 29
  *

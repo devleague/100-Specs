@@ -29,7 +29,7 @@ var sahara_animal = 'The Addax';
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-var planets = ['Mercury', 'Venus' , 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 /* Step 5
  *
@@ -406,12 +406,14 @@ function listLivingOrgClass () {
  *
  */
 function favoritePlanet (currentPlanet) {
-	if (!planets[currentPlanet]) {
-		return currentPlanet + " is not a planet!";
-	} else {
-		var ranPlanet = planets[Math.floor(Math.random() * planets.length)];
+	for (var i = 0; i < planets.length; i++) {
+
+		if (currentPlanet === planets[i]) {
+			var ranPlanet = planets[Math.floor(Math.random() * planets.length)];
 			return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + ranPlanet + '.';
+		} 
 	}
+	return currentPlanet + " is not a planet!"; 
 }
 
 /* Step 27

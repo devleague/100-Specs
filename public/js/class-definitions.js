@@ -472,7 +472,11 @@ function purchaseLaptop (laptop) {
  * @return {Bool}
  *
  */
-
+function canTalkAbout (club) {
+	if (club_name[club]) {
+		
+	}
+}
 
 /* Step 30
  *

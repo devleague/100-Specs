@@ -446,6 +446,17 @@ function listLivingOrgClass () {
 	return results;
 }
 
+// //var planets = [
+// 	"Mercury", 
+// 	"Venus", 
+// 	"Earth", 
+// 	"Mars", 
+// 	"Jupiter", 
+// 	"Saturn", 
+// 	"Uranus", 
+// 	"Neptune"
+// 	];
+
 /* Step 26
  *
  * Define a function named "favoritePlanet" that
@@ -465,8 +476,16 @@ function listLivingOrgClass () {
  * @return {String}
  *
  */
-function favoritePlanet () {
+function favoritePlanet (myplanet) {
 
+	for (var i = 0; i < planets.length; i++) {
+		if (planets[i] === myplanet) {
+			var randomPlanet = planets[Math.floor(Math.random() * 
+				planets.length)];
+			return "I'm from " + myplanet + ", but I wish I could go to " + randomPlanet + ".";
+		}
+	}
+		return myplanet + " is not a planet!";
 }
 
 /* Step 27

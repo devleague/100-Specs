@@ -438,6 +438,22 @@ function favoritePlanet (currentPlanet) {
  *   earnMoney
  *
  */
+var Person = function (name, money, age, gender) {
+	this.name = 'Jon';
+	this.money = 100;
+	this.age = 30;
+	this.gender = 'Male';
+};
+
+Person.prototype.spendMoney = function (x) {
+	this.money -= x;
+};
+
+Person.prototype.earnMoney = function (x) {
+	this.money += x;
+};
+
+
 
 
 /* Step 28
@@ -473,8 +489,10 @@ function purchaseLaptop (laptop) {
  *
  */
 function canTalkAbout (club) {
-	if (club_name[club]) {
-		
+	if (club_name === club) {
+		return false;		
+	} else {
+	return true;
 	}
 }
 
@@ -498,6 +516,12 @@ function canTalkAbout (club) {
  *   write
  *
  */
+var Pen = function (color) {
+	this.color = color;
+};
+Pen.prototype.write = function (message) {
+		return this.color + ': ' + message;
+};
 
 
 /* Step 31
@@ -526,6 +550,23 @@ function canTalkAbout (club) {
  *   grow
  *
  */
+var Garden = function (plantsTotal, isWatered) {
+	this.plantsTotal = 10;
+	this.isWatered = false;
+};
+
+Garden.prototype.water = function () {
+	this.isWatered = true;
+};
+
+Garden.prototype.grow = function () {
+	if (this.isWatered === true) {
+		this.plantsTotal ++;
+	}
+	if (this.isWatered === false) {
+		return false;
+	}
+};
 
 
 /* Step 32
@@ -544,6 +585,17 @@ function canTalkAbout (club) {
  *   removePlanet
  *
  */
+var SolarSystem = function (planets) {
+	this.planets = [];
+};
+
+SolarSystem.prototype.addPlanet = function () {
+	this.planets.push(planets);
+};
+
+SolarSystem.prototype.removePlanet = function () {
+	this.planets.pop();
+};
 
 
 /* Step 33

@@ -630,7 +630,29 @@ SolarSystem.prototype.removePlanet = function () {
  *   marries
  *
  */
+var PrincessLeia = function (name, money, age, gender, isInTrouble) {
+	this.isInTrouble = null;
+};
 
+PrincessLeia.prototype.shootsGun = function () {
+	this.isInTrouble = false;
+	return "Leia shoots her gun wildly";
+};
+
+PrincessLeia.prototype.getsInTrouble = function () {
+	this.isInTrouble = true;
+	return "Help me Obi-wan Kenobi, you're my only hope";
+};
+
+PrincessLeia.prototype.marries = function (love) {
+	if (love === "Han Solo") {
+		return true;
+	} else if (love === "Luke Skywalker") {
+		return "Gross!";
+	} else {
+		return false;
+	}
+};
 
 /* Step 34
  *

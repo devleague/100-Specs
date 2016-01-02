@@ -353,6 +353,33 @@ function installLinux(Linux) {
  *
  */
 
+function drink(beerType) {
+	if (!beers[beerType]) {
+		return false;
+	}
+
+	else if (typeof beers[beerType] == 'string') {
+			return "This" + beerName + "is" + beerDescription + ".";
+		} else {
+			if (typeof beers[beerType] == 'object') {
+		return "This" + beerName + "is" + beerDescription1 + "and" + beerDescription2 + "and..."; }
+		}
+}
+
+
+	// function drink(beerType) {
+	//   if (beers.hasOwnProperty(beerType)) {
+	//     if (Array.isArray(beers[beerType])) {
+	//       for (var i = 0; i < beers[beerType].length; i++) {
+	//         return 'This ' + beerType + ' is ' + beers[beerType][i] + ' and ' + beers[beerType][i + 1] + '.';
+	//       }
+	//     } else {
+	//       return 'This ' + beerType + ' is ' + beers[beerType] + '.';
+	//     }
+	//   } else {
+	//     return false;
+	//   }
+	// }
 
 /* Step 24
  *
@@ -366,6 +393,14 @@ function installLinux(Linux) {
  *
  */
 
+var browseURL = function (browser) {
+  if (browsers.hasOwnProperty(browser)) {
+    return browsers[browser];
+  } else {
+    return false;
+  }
+ };
+
 
 /* Step 25
  *
@@ -376,6 +411,21 @@ function installLinux(Linux) {
  * @return {String}
  *
  */
+
+ function ListLivingOrgClass () {
+ 	 for (var i = 0; i < listLivingOrganismClassification.length; i++) {
+ 	 	return '<ul>' + listLivingOrganismClassification[i] + '<li>';
+ 	 }
+ }
+
+
+//function listLivingOrgClass() {
+//  var url = '<ul>';
+//  for (var i = 0; i < livingOrganismClassification.length; i++) {
+//    url += '<li>' + (livingOrganismClassification[i]) + '</li>';
+//  }
+//  return url + '</ul>';
+//}
 
 
 /* Step 26
@@ -397,6 +447,15 @@ function installLinux(Linux) {
  * @return {String}
  *
  */
+function favoritePlanet(currentPlanet) {
+	if (planets.indexOf(currentPlanet) === -1) {
+		return currentPlanet + ' is not a planet!';
+	} else {
+		for (var i = 0; i < planets.length; i++) {
+			return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + (planets[i]);
+		}
+	}
+}
 
 
 /* Step 27
@@ -422,6 +481,23 @@ function installLinux(Linux) {
  *
  */
 
+var Person = function (name, money, age, gender) {
+	this.name = name;
+	this.money = money;
+	this.age = age;
+	this.gender = gender;
+};
+
+Person.prototype.spendMoney = function(money) {
+	this.money -= money;
+};
+
+
+Person.prototype.earnMoney = function(amount) {
+  this.money = this.money + amount;
+};
+
+
 
 /* Step 28
  *
@@ -434,6 +510,16 @@ function installLinux(Linux) {
  * @return {String}
  *
  */
+var purchaseLaptop = function (laptop) {
+	if (laptopCosts.hasOwnProperty(laptop)) {
+		return laptopCosts[laptop].toString();
+//if (laptopCosts.hasOwnProperty(laptop))
+	} else { 
+		return -1;
+	}
+}; 
+
+
 
 
 /* Step 29
@@ -447,7 +533,28 @@ function installLinux(Linux) {
  * @return {Bool}
  *
  */
+function canTalkAbout (club) {
+	if (club.talk !== null) {
+		return true;
+	}
+	else if (club === club_name) {
+		return false;
+	}
 
+function talk () { 
+	return "test";
+} 
+
+}
+
+
+//function canTalkAbout(club) {
+//  if (club_name === club) {
+//    return false;
+//  } else {
+//    return true;
+//  }
+//}
 
 /* Step 30
  *
@@ -469,6 +576,26 @@ function installLinux(Linux) {
  *   write
  *
  */
+var Pen = function () {
+	this.color = color;
+
+	function write (message) {
+
+	 newMessage = color.append(message);
+		return newMessage;
+	}
+
+};
+
+
+// function Pen(color) {
+// 	  this.color = color;
+// 	}
+
+
+// 	Pen.prototype.write = function(message) {
+// 	  return this.color + ": " + message;
+// 	};
 
 
 /* Step 31
@@ -498,6 +625,25 @@ function installLinux(Linux) {
  *
  */
 
+function Garden (plantsTotal,isWatered) {
+	this.plantsTotal = plantsTotal;	
+  this.isWatered = false;
+}
+
+function water () {
+	if (this.plantsTotal > 1) {
+		this.isWatered = true;
+	}
+}
+
+Garden.prototype.grow = function(plant) {
+	if (plant.isWatered === true) {
+			this.plantsTotal++;
+	} else if (this.isWatered === false) {
+		return false;
+	}
+};
+
 
 /* Step 32
  *
@@ -515,6 +661,21 @@ function installLinux(Linux) {
  *   removePlanet
  *
  */
+function SolarSystem (planets) {
+	 planets = [];
+
+}
+
+SolarSystem.prototype.addPlanets = function(planet) {
+	this.planets.push(planet);
+};
+
+SolarSystem.prototype.removePlanet = function() {
+	this.planets.pop(planet);
+};
+
+
+
 
 
 /* Step 33
@@ -549,6 +710,45 @@ function installLinux(Linux) {
  *   marries
  *
  */
+function PrincessLeia (name, money, age, gender, isInTrouble) {
+	this.name = name;
+	this.money = money;
+	this.age = age;
+	this.gender = gender;
+	this.isInTrouble = null;
+	Person.call(this, name, money, age, gender);
+}
+
+
+
+PrincessLeia.prototype = Object.create(Person.prototype, {
+	constructor : {
+		value: PrincessLeia
+	}
+});
+
+
+PrincessLeia.prototype.shootsGun = function() {
+	this.isInTrouble = false;
+		return 'Leia shoots her gun wildy';
+};
+
+PrincessLeia.prototype.getsInTrouble  = function() {
+	this.isInTrouble = true;
+		return 'Help me Obi-wan Kenobi you\'re my only hope';
+};
+
+PrincessLeia.prototype.marries = function(love) {
+	if (love === 'Han Solo') {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+
+
+
 
 
 /* Step 34
@@ -568,6 +768,20 @@ function installLinux(Linux) {
  *   staplePapers
  *
  */
+function Stapler (color, maxPapers) {
+	this.color = color;
+	this.maxPapers = maxPapers;
+}
+
+Stapler.prototype.staplePapers = function(numberPapers) {
+	if (numberPapers <= this.maxPapers) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+
 
 
 /* Step 35
@@ -609,6 +823,56 @@ function installLinux(Linux) {
  *
  */
 
+function Scientist (name, money, age, gender, disciplines, discoveries) {
+	this.name = name;
+	this.money = money;
+	this.age = age;
+	this.gender = gender;
+	disciplines = [];
+	discoveries = [];
+	Person.call(this, name, money, age, gender);
+
+}
+
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor : {
+    value : Scientist
+  }
+});
+
+
+
+Scientist.prototype.addDiscipline = function(newDiscipline) {
+  this.disciplines.push(newDiscipline);
+  return newDiscipline;
+};
+
+
+
+Scientist.prototype.checkDiscipline = function(oldDiscipline) {
+  if ((this.disciplines.indexOf(oldDiscipline) == -1 )) {
+    return false;
+  } else {
+    return true;
+  }
+};
+ 	
+ 
+Scientist.prototype.addDiscovery = function(newDiscovery) {
+  this.discoveries.push(newDiscovery);
+  for (var i = 0; i < this.discoveries.length; i++) {
+    if (this.discoveries.length === 1) {
+      return 'I discovered ' + newDiscovery + '.';
+    }
+    if (this.discoveries.length === 2) {
+      return 'I discovered ' + this.discoveries[i] + ' and ' + this.discoveries[i + 1] + '.';
+    }
+    if (this.discoveries.length === 3) {
+      return 'I discovered ' + this.discoveries[i] + ', ' + this.discoveries[i + 1] + ', and ' + this.discoveries[i + 2] + '.';
+    }
+  }
+};
+
 
 /* Step 36
  *
@@ -630,6 +894,26 @@ function installLinux(Linux) {
  *   rob
  *
  */
+function BankAccount (balance, owner) {
+	this.balance = balance;
+	this.owner = owner;
+}
+
+BankAccount.prototype.withdraw = function (amount) {
+	 this.balance -= amount;
+	 Person.money += amount;
+};
+
+BankAccount.prototype.deposit = function (amount) {
+	 this.balance += amount;
+	 Person.money -= amount;
+};
+
+BankAccount.prototype.rob = function (amount) {
+	this.balance -= amount;
+	Person.money += amount;
+};
+
 
 
 /* Step 37
@@ -803,7 +1087,10 @@ function installLinux(Linux) {
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+function Animal (species, gender) {
+	this.species = species;
+	this.gender = gender;
+}
 
 /**
  * Step 51
@@ -813,7 +1100,10 @@ function installLinux(Linux) {
  * @param {string} model The vehicle's model
  */
 
-
+function Vehicle(make, model) {
+	this.make = make;
+	this.model = model;
+}
 /**
  * Step 52
  *
@@ -823,7 +1113,14 @@ function installLinux(Linux) {
  * value of the sides property to null.
  *
  */
-
+function Shape (sides) {
+	this.sides = sides;
+	if (this.sides >= 3) {
+		return this.side;
+	} else {
+		this.sides = null;
+	}
+}
 
 /**
  * Step 53
@@ -832,7 +1129,11 @@ function installLinux(Linux) {
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
+function Box (contents, isOpen) {
+	this.contents = contents;
+	this.isOpen = isOpen;
 
+}
 
 /**
  * Step 54
@@ -840,7 +1141,9 @@ function installLinux(Linux) {
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door (isOpen) {
+	this.isOpen = isOpen;
+}
 
 /**
  * Step 55
@@ -849,7 +1152,10 @@ function installLinux(Linux) {
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-
+function Shoe (size, color) {
+	this.size = size;
+	this.color = color;
+}
 
 /**
  * Step 56
@@ -857,7 +1163,9 @@ function installLinux(Linux) {
  * House class
  * @param {number} stories How many stories tall the house is
  */
-
+function House (stories) {
+	this.stories = stories;
+}
 
 /**
  * Step 57
@@ -865,6 +1173,10 @@ function installLinux(Linux) {
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
+
+ function Lightbulb (isOn) {
+ 	this.isOn = isOn;
+ }
 
 
 /**
@@ -874,6 +1186,9 @@ function installLinux(Linux) {
  * @param {string} flavor The cookie's flavor
  */
 
+function Cookie (flavor) {
+	this.flavor = flavor;
+}
 
 /**
  * Step 59
@@ -881,7 +1196,9 @@ function installLinux(Linux) {
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+function Meal (foods) {
+	this.foods = foods;
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
@@ -890,44 +1207,44 @@ function installLinux(Linux) {
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal ('dog', 'female');
+var nemo = new Animal ('fish', 'male');
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle ('ford', 'focus');
+var forte = new Vehicle ('honda', 'accord');
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(5);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox = new Box ('toys', true);
+var christmasPresent = new Box ('lights', true);
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door(true);
+var bankVault = new Door(false);
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe (5, 'blue');
+var dressShoes = new Shoe (10, 'red');
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory = new House (1);
+var twoStory = new House(2);
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb('on');
+var halogen = new Lightbulb('off');
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie ('chocolate');
+var gingerbread = new Cookie ('ginger');
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal (['eggs', 'ham', 'coffee']);
+var dinner = new Meal (['steak', 'potatoes', 'wine']);
 
 
  /* Steps 81 to 90
@@ -952,6 +1269,29 @@ var dinner;
  *
  */
 
+// function Animal (isWarmBlooded) {
+// 	this.isWarmBlooded = isWarmBlooded;
+// 	if (this.isWarmBlooded) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+Animal.prototype.isWarmBlooded = function () {
+	if (this.species === 'Fish') {
+		return false;
+	}
+	if (this.species === 'Monkey') {
+		return true;
+	}
+	if (this.species === 'Bird') {
+		return true;
+	} else {
+		return 'Could not determine if warm-blooded';
+	}
+
+};
 
 /* Step 82
  *
@@ -960,6 +1300,13 @@ var dinner;
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+Vehicle.prototype.drive = function (streetName) {
+	if (streetname !== '' || typeof streetname === 'string') {
+		return "Driving on " + streetname;
+	} else {
+		return "Driving forward";
+	}
+};
 
 
  /* Step 83
@@ -980,6 +1327,34 @@ var dinner;
  *
  */
 
+Shape.prototype.getType  = function () {
+	if (this.side === 3) {
+		return 'triangle';
+	}
+	if (this.side === 4) {
+		return 'quadrilateral';
+	}
+	if (this.side === 5) {
+		return 'pentagon';
+	}
+	if (this.side === 6) {
+		return 'hexagon';
+	}
+	if (this.side === 7) {
+		return 'heptagon';
+	}
+	if (this.side === 8) {
+		return 'octagon';
+	}
+	if (this.side === 9) {
+		return 'nonagon';
+	}
+	if (this.side === 10) {
+		return 'decagon';
+	}
+	
+
+};
 
 /* Step 84
  *
@@ -989,6 +1364,14 @@ var dinner;
  * Return true if openBox opens the box, false otherwise.
  *
  */
+Box.prototype.openBox = function () {
+	if (this.isOpened === false) {
+		this.isOpened = true;
+		return true;
+	} else {
+		return false;
+	}
+};
 
 
  /* Step 85
@@ -998,6 +1381,15 @@ var dinner;
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
+Door.prototype.openClose = function () {
+	if (this.isOpen === false) {
+		this.isOpen = true;
+		return true;
+	} else {
+		this.isOpen = false;
+		return false;
+	}
+};
 
 
 /* Step 86
@@ -1006,7 +1398,9 @@ var dinner;
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
-
+Shoe.prototype.findShoes = function () {
+	return "Found " + this.color + "shoes of size " + this.size;
+};
 
  /* Step 87
  *
@@ -1016,7 +1410,13 @@ var dinner;
  * storiesTooTall, return true, else return false.
  *
  */
-
+House.prototype.isATallStory = function (storiesTooTall) {
+	if (this.stories >= storiesTooTall) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
  /* Step 88
  *
@@ -1027,8 +1427,26 @@ var dinner;
  * Return true if isOn is true, false otherwise.
  *
  */
+Lightbulb.prototype.flipSwitch = function(on) {
+	if (on === 'on') {
+		this.isOn = true;
+		return true;
+	} else {
+		this.isOn = false;
+		return false;
+	}
+};
 
 
+Lightbulb.prototype.flipSwitch = function(on) {
+  if (on === 'on') {
+    this.isOn = true;
+    return true;
+  } else {
+    this.isOn = false;
+    return false;
+  }
+};
  /* Step 89
  *
  * Declare a Cookie method called swipedByCookieMonster that accepts
@@ -1036,7 +1454,13 @@ var dinner;
  * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
-
+Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek) {
+	if ((this.flavor === 'chocolate') && (dayOfTheWeek === 'Monday')) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
  /* Step 90
  *
@@ -1052,6 +1476,21 @@ var dinner;
  *
  */
 
+ var junkfood = ["chips", "soda", "ice cream", "popcorn", "candy"];
+
+Meal.prototype.containsJunkFood = function () {
+	var junkfood = ["chips", "soda", "ice cream", "popcorn", "candy"];
+	for (var i = 0; i < junkfood.length; i++) {
+		if (this.foods.indexOf(junkFood[i]) > -1) {
+			return true;
+			} else {
+			return false;
+			}
+	}
+};
+
+
+
 
  /* Steps 91 to 100
  *
@@ -1066,19 +1505,25 @@ var dinner;
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var fred = new Animal('human', 'male');
+var slither = new Animal('snake', 'female');
+var slows = new Animal('slug', 'male');
 
 
+var warmBloodedAnimal = fred.isWarmBlooded();
+var coldBloodedAnimal = slither.isWarmBlooded();
+var notWarmOrColdAnimal = slows.isWarmBlooded();
 /* Step 92
  *
  * Call the drive method on two Vehicle instances
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var fredcar = new Vehicle ("ford", "escort");
+var mikecar = new Vehicle ("tesla", "x-wing");
+
+var streetDriving = fredcar.drive('airport');
+var forwardDriving = mikecar.drive('luau');
 
 
  /* Step 93
@@ -1087,8 +1532,11 @@ var forwardDriving;
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var myshape = new Shape(10);
+var hershape = new Shape(8);
+
+var decagon = myShape.getType();
+var polygon = herShape.getType();
 
 
 /* Step 94
@@ -1097,8 +1545,11 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var myBox = new Box ('clothes', false);
+var herBox = new Box ('sheets', true);
+
+var openAClosedBox = myBox.openBox();
+var closeAnOpenBox = herBox.openBox();
 
 
  /* Step 95
@@ -1107,9 +1558,11 @@ var closeAnOpenBox;
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var doorOne = new Door (true);
+var doorTwo = new Door (false);
 
+var openAClosedDoor = doorOne.openClose();
+var closeAnOpenDoor = doorTwo.openClose();
 
 /* Step 96
  *
@@ -1117,8 +1570,8 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97
@@ -1127,8 +1580,8 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory = singleStory.isATallStory(200);
+var shortStory = twoStory.isATallStory(2);
 
 
  /* Step 98
@@ -1137,8 +1590,9 @@ var shortStory;
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+
+var kitchenLightsOn = incandescent.flipSwitch();
+var porchLightsOff = halogen.flipSwitch();
 
 
  /* Step 99
@@ -1147,8 +1601,8 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster('Tuesday');
+var cookieMonsterBlocked = gingerbread.swipedByCookieMonster('Monday');
 
 
  /* Step 100
@@ -1157,5 +1611,8 @@ var cookieMonsterBlocked;
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var breakfast = new Meal (['eggs', 'ham', 'coffee']);
+var dinner = new Meal (['steak', 'potatoes', 'wine']);
+
+var badForYou = breakfast.containsJunkFood();
+var goodForYou = dinner.containsJunkFood();

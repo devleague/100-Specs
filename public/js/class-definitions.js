@@ -510,6 +510,27 @@ function favoritePlanet (myplanet) {
  *   earnMoney
  *
  */
+Person = function (name, money, age, gender) {
+	this.name = name;
+	this.money = money;
+	this.age = age;
+	this.gender = gender;
+};
+
+Person.prototype.spendMoney = function (money) {
+	var spend = (this.money -= money);
+	return spend;
+};
+
+Person.prototype.earnMoney = function (money) {
+	var earn = (this.money += money);
+	return earn;
+};
+
+
+
+
+
 
 
 /* Step 28
@@ -524,6 +545,13 @@ function favoritePlanet (myplanet) {
  *
  */
 
+purchaseLaptop = function (laptop){
+	if(laptopCosts.hasOwnProperty(laptop)){
+		return laptopCosts[laptop].toString();
+	}else {
+		return -1;
+	}
+};
 
 /* Step 29
  *
@@ -536,7 +564,13 @@ function favoritePlanet (myplanet) {
  * @return {Bool}
  *
  */
-
+canTalkAbout = function (club) {
+	if(club === club_name){
+		return false;
+	}else {
+		return true;
+	}
+};
 
 /* Step 30
  *
@@ -558,7 +592,15 @@ function favoritePlanet (myplanet) {
  *   write
  *
  */
+Pen = function (color) {
+	this.color = color;
+};
 
+Pen.prototype.write = function(message) {
+	var response = this.color + ": " + message;
+	console.log(response);
+	return response;
+};
 
 /* Step 31
  *
@@ -586,7 +628,17 @@ function favoritePlanet (myplanet) {
  *   grow
  *
  */
+Garden = function (plantsTotal, isWatered){
+	this.plantsTotal = plantsTotal;
+};
 
+Garden.prototype.water = function() {
+	
+};
+
+Garden.prototype.grow = function() {
+	// body...
+};
 
 /* Step 32
  *

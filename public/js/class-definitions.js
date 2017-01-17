@@ -4,7 +4,7 @@
  * then set it's value to null;
  *
  */
-
+var unicorn = null;
 
 /* Step 2
  *
@@ -12,7 +12,7 @@
  * then assign it to be the value of "Atari"
  *
  */
-
+var videogame_system = 'Atari';
 
 /* Step 3
  *
@@ -20,7 +20,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+var sahara_animal = 'The Addax';
 
 /* Step 4
  *
@@ -29,7 +29,7 @@
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-
+var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 /* Step 5
  *
@@ -38,7 +38,7 @@
  * each galilean moon of Jupiter
  *
  */
-
+var galilean_moons = ['Io', 'Europa', 'Ganymede', 'Callisto'];
 
 /* Step 6 φ
  *
@@ -46,7 +46,7 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-
+var golden_ratio = 1.61803398874;
 
 /* Step 7
  *
@@ -54,7 +54,7 @@
  * and assign the value of earths_water_composition to 0.71
  *
  */
-
+var earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -62,7 +62,7 @@
  * and assign the value of club_name to "Fight Club"
  *
  */
-
+var club_name = 'Fight Club';
 
 /* Step 9
  *
@@ -73,7 +73,11 @@
  *   male    => "male"
  *   unknown => undefined
  */
-
+var gender = {
+	female : "female",
+	male : "male",
+	unknown : undefined
+};
 
 /* Step 10
  *
@@ -87,7 +91,12 @@
  *   gender  => gender.female
  *
  */
-
+var princess_leia = {
+	name : "Leia Organa",
+	money : 890,
+	age : 20,
+	gender : gender.female
+};
 
 /* Step 11
  *
@@ -100,7 +109,12 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+var domains = {
+	'ycombinator.com' : "198.41.190.47",
+	'laughingsquid.com' : "162.159.247.97",
+	'slumlordhosting.com' : "198.61.179.126",
+	'jsonformatter.curiousconcept.com' : "104.28.5.70"
+};
 
 /* Step 12
  *
@@ -115,7 +129,14 @@
  *   Konqueror  => "konqueror.org"
  *
  */
-
+var browsers = {
+	Chromium : "google.com",
+	Safari : "apple.com",
+	Opera : "opera.com",
+	Firefox : "mozilla.org",
+	Sleipnir : "fenrir-inc.com",
+	Konqueror : "konqueror.org"
+};
 
 /* Step 13
  *
@@ -133,7 +154,18 @@
  *  isDouble  => true
  *
  */
-
+var rainbow = {
+	colors : {
+		red : "#F0280A",
+		orange : "#FF8800",
+		yellow : "#FFDD00",
+		green : "#51AB0C",
+		blue : "#1593ED",
+		indigo : "#5215ED",
+		violet : "#A915ED"
+	},
+	isDouble : true
+};
 
 /* Step 14
  *
@@ -148,7 +180,7 @@
  * "Bieber Linux"
  *
  */
-
+var linuxFlavors = ["Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieber Linux"];
 
 /* Step 15
  *
@@ -162,7 +194,7 @@
  * "cytosine"
  *
  */
-
+var DNA = ["nucleatides", "guanine", "adenine", "thymine", "cytosine"];
 
 /* Step 16
  *
@@ -175,7 +207,12 @@
  * Surface      => 320
  *
  */
-
+var laptopCosts = {
+	MacBook : 1500,
+	Alienware : 2500,
+	HP : 499,
+	Surface : 320
+};
 
 /* Step 17
  *
@@ -191,7 +228,7 @@
  * "Species"
  *
  */
-
+var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
 
 /* Step 18
  *
@@ -205,7 +242,7 @@
  * "cvs"
  *
  */
-
+var scmList = ["git", "svn", "mercurial", "bazaar", "cvs"];
 
 /* Step 19
  *
@@ -216,7 +253,7 @@
  * Lager        => "Strong"
  * Heffeweisen  => "German"
  * Stout        => [Array]
- *                  "Thick"
+ *                  "Thick"	
  *                  "Dark"
  * Porter       => "Bitter"
  * Ale          => [Array]
@@ -224,7 +261,14 @@
  *                  "Golden"
  *
  */
-
+var beers = {
+	IPA : "Ale",
+	Lager : "Strong",
+	Heffeweisen : "German",
+	Stout : ["Thick", "Dark"],
+	Porter : "Bitter",
+	Ale : ["Light", "Golden"]
+};
 
 /* Step 20
  *
@@ -234,7 +278,9 @@
  * @return {String}
  *
  */
-
+function sahara_river () {
+	return "Nile River";
+}
 
 /* Step 21
  *
@@ -246,7 +292,9 @@
  * @return {Number}
  *
  */
-
+function addNumbers (a, b) {
+	return a + b;
+}
 
 /* Step 22
  *
@@ -259,7 +307,13 @@
  * @return {Bool}
  *
  */
-
+function installLinux (linux) {
+	if (linuxFlavors.indexOf(linux) !== -1) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /* Step 23
  *
@@ -278,6 +332,17 @@
  * @return {Bool when False, String when True}
  *
  */
+function drink (beerType) {
+	if (!beers[beerType]) {
+			return false;
+		} else if (typeof beers[beerType] === 'string') {
+			return 'This ' + beerType + ' is ' + beers[beerType] + '.';
+		} else {
+			if (typeof beers[beerType] === 'object') {
+			return 'This ' + beerType + ' is ' + beers[beerType][0] + ' and ' + beers[beerType][1] + '.';
+		}
+	}
+}
 
 
 /* Step 24
@@ -291,7 +356,15 @@
  * @return {String if true else return false}
  *
  */
-
+function browseURL (browserType) {
+	if (!browsers[browserType]) {
+		return false;
+	} else {
+		if (browsers[browserType]) {
+			return browsers[browserType];
+		}
+	}
+}
 
 /* Step 25
  *
@@ -302,7 +375,16 @@
  * @return {String}
  *
  */
-
+function listLivingOrgClass () {
+	var ul = document.createElement('ul');
+	for (var i = 0; i <= livingOrganismClassification.length; i++) {
+		var livingOrg = livingOrganismClassification[i];
+		var newList = document.createElement('li');
+		newList.innerHTML = livingOrg;
+		ul.appendChild(newList);
+	}
+	return ul.outerHTML;
+}
 
 /* Step 26
  *
@@ -323,7 +405,16 @@
  * @return {String}
  *
  */
+function favoritePlanet (currentPlanet) {
+	for (var i = 0; i < planets.length; i++) {
 
+		if (currentPlanet === planets[i]) {
+			var ranPlanet = planets[Math.floor(Math.random() * planets.length)];
+			return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + ranPlanet + '.';
+		} 
+	}
+	return currentPlanet + " is not a planet!"; 
+}
 
 /* Step 27
  *
@@ -347,6 +438,22 @@
  *   earnMoney
  *
  */
+var Person = function (name, money, age, gender) {
+	this.name = 'Jon';
+	this.money = 100;
+	this.age = 30;
+	this.gender = 'Male';
+};
+
+Person.prototype.spendMoney = function (x) {
+	this.money -= x;
+};
+
+Person.prototype.earnMoney = function (x) {
+	this.money += x;
+};
+
+
 
 
 /* Step 28
@@ -360,7 +467,15 @@
  * @return {String}
  *
  */
-
+function purchaseLaptop (laptop) {
+	if (!laptopCosts[laptop]) {
+		return -1;
+	} else { 
+      if (typeof laptopCosts[laptop] === 'number') {
+        return laptopCosts[laptop].toString();
+      }
+	}
+}
 
 /* Step 29
  *
@@ -373,7 +488,13 @@
  * @return {Bool}
  *
  */
-
+function canTalkAbout (club) {
+	if (club_name === club) {
+		return false;		
+	} else {
+	return true;
+	}
+}
 
 /* Step 30
  *
@@ -395,6 +516,12 @@
  *   write
  *
  */
+var Pen = function (color) {
+	this.color = color;
+};
+Pen.prototype.write = function (message) {
+		return this.color + ': ' + message;
+};
 
 
 /* Step 31
@@ -423,6 +550,23 @@
  *   grow
  *
  */
+var Garden = function (plantsTotal, isWatered) {
+	this.plantsTotal = 10;
+	this.isWatered = false;
+};
+
+Garden.prototype.water = function () {
+	this.isWatered = true;
+};
+
+Garden.prototype.grow = function () {
+	if (this.isWatered === true) {
+		this.plantsTotal ++;
+	}
+	if (this.isWatered === false) {
+		return false;
+	}
+};
 
 
 /* Step 32
@@ -441,6 +585,17 @@
  *   removePlanet
  *
  */
+var SolarSystem = function (planets) {
+	this.planets = [];
+};
+
+SolarSystem.prototype.addPlanet = function () {
+	this.planets.push(planets);
+};
+
+SolarSystem.prototype.removePlanet = function () {
+	this.planets.pop();
+};
 
 
 /* Step 33
@@ -475,7 +630,29 @@
  *   marries
  *
  */
+var PrincessLeia = function (name, money, age, gender, isInTrouble) {
+	this.isInTrouble = null;
+};
 
+PrincessLeia.prototype.shootsGun = function () {
+	this.isInTrouble = false;
+	return "Leia shoots her gun wildly";
+};
+
+PrincessLeia.prototype.getsInTrouble = function () {
+	this.isInTrouble = true;
+	return "Help me Obi-wan Kenobi, you're my only hope";
+};
+
+PrincessLeia.prototype.marries = function (love) {
+	if (love === "Han Solo") {
+		return true;
+	} else if (love === "Luke Skywalker") {
+		return "Gross!";
+	} else {
+		return false;
+	}
+};
 
 /* Step 34
  *

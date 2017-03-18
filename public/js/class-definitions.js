@@ -1,3 +1,5 @@
+var unicorn = null;
+
 /* Step 1
  *
  * Declare a variable named "unicorn"
@@ -5,7 +7,7 @@
  *
  */
 
-
+var videogame_system = "Atari";
 /* Step 2
  *
  * Declare a variable named "videogame_system"
@@ -13,14 +15,23 @@
  *
  */
 
-
+var sahara_animal = "The Addax";
 /* Step 3
  *
  * Declare a variable named "sahara_animal"
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+var planets = [
+	"Mercury", 
+	"Venus", 
+	"Earth", 
+	"Mars", 
+	"Jupiter", 
+	"Saturn", 
+	"Uranus", 
+	"Neptune"
+	];
 
 /* Step 4
  *
@@ -30,7 +41,12 @@
  * Capitalize the names.
  */
 
-
+var galilean_moons = [
+	"Io", 
+	"Europa", 
+	"Ganymede", 
+	"Callisto"
+	];
 /* Step 5
  *
  * Declare a variable named "galilean_moons"
@@ -39,7 +55,7 @@
  *
  */
 
-
+var golden_ratio = 1.61803398874;
 /* Step 6 φ
  *
  * Declare a variable named "golden_ratio"
@@ -47,7 +63,7 @@
  *
  */
 
-
+var earths_water_composition = 0.71;
 /* Step 7
  *
  * Declare a variable named "earths_water_composition"
@@ -55,7 +71,7 @@
  *
  */
 
-
+var club_name = "Fight Club";
 /* Step 8
  *
  * Declare a variable named "club_name"
@@ -63,7 +79,11 @@
  *
  */
 
-
+var gender = {
+	female: "female", 
+	male: "male", 
+	unknown: undefined
+};
 /* Step 9
  *
  * Define a literal object named "gender"
@@ -74,6 +94,12 @@
  *   unknown => undefined
  */
 
+var princess_leia = {
+	name: "Leia Organa", 
+	money: 890, 
+	age: 20, 
+	gender: gender.female
+};
 
 /* Step 10
  *
@@ -87,8 +113,12 @@
  *   gender  => gender.female
  *
  */
-
-
+var domains = {
+	'ycombinator.com': "198.41.190.47", 
+	'laughingsquid.com': "162.159.247.97",
+ 	'slumlordhosting.com': "198.61.179.126",
+ 	'jsonformatter.curiousconcept.com': "104.28.5.70"
+ };
 /* Step 11
  *
  * Define a literal object named "domains"
@@ -100,7 +130,14 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+var browsers = {
+	Chromium: "google.com", 
+	Safari: "apple.com", 
+	Opera: "opera.com", 
+	Firefox: "mozilla.org", 
+	Sleipnir: "fenrir-inc.com", 
+	Konqueror: "konqueror.org"
+};
 
 /* Step 12
  *
@@ -115,6 +152,20 @@
  *   Konqueror  => "konqueror.org"
  *
  */
+var rainbow = {
+	colors: {
+		red: "#F0280A", 
+		orange: "#FF8800", 
+		yellow: "#FFDD00", 
+		green: "#51AB0C", 
+		blue: "#1593ED",
+		indigo: "#5215ED", 
+		violet: "#A915ED"
+},
+isDouble: true
+};
+
+
 
 
 /* Step 13
@@ -134,6 +185,14 @@
  *
  */
 
+var linuxFlavors = [
+	'Gentoo', 
+	'Fedora', 
+	'Debian', 
+	'Slackware',
+	'Red Hat', 
+	'Bieber Linux'
+	];
 
 /* Step 14
  *
@@ -149,6 +208,13 @@
  *
  */
 
+var DNA = [
+"nucleatides", 
+"guanine", 
+"adenine",
+"thymine", 
+"cytosine"
+];
 
 /* Step 15
  *
@@ -162,7 +228,11 @@
  * "cytosine"
  *
  */
-
+var laptopCosts = {
+	MacBook: 1500, 
+	Alienware: 2500, 
+	HP: 499, 
+	Surface: 320};
 
 /* Step 16
  *
@@ -176,6 +246,14 @@
  *
  */
 
+var livingOrganismClassification = [
+'Kingdom', 
+'Phylum', 
+'Class',
+'Order', 
+'Family', 
+'Genus', 
+'Species'];
 
 /* Step 17
  *
@@ -192,6 +270,12 @@
  *
  */
 
+var scmList = [
+'git', 
+'svn', 
+'mercurial', 
+'bazaar',
+'cvs'];
 
 /* Step 18
  *
@@ -205,7 +289,14 @@
  * "cvs"
  *
  */
-
+var beers = {
+	IPA: "Ale", 
+	Lager: "Strong",
+	Heffeweisen: "German", 
+	Stout: ["Thick", "Dark"], 
+	Porter: "Bitter", 
+	Ale: ["Light","Golden"]
+};
 
 /* Step 19
  *
@@ -224,6 +315,9 @@
  *                  "Golden"
  *
  */
+var sahara_river = function() {
+	return 'Nile River';
+};
 
 
 /* Step 20
@@ -234,7 +328,10 @@
  * @return {String}
  *
  */
-
+function addNumbers(x,y){
+	
+	return x + y;
+}
 
 /* Step 21
  *
@@ -247,6 +344,17 @@
  *
  */
 
+function installLinux (Linux) {
+	if (linuxFlavors.indexOf(Linux) > -1) {
+		return true;
+
+	} 
+		else {
+		
+		return false;
+	
+	}
+}
 
 /* Step 22
  *
@@ -261,6 +369,18 @@
  */
 
 
+ function drink (type){
+ 	var descriptions = beers[type];
+ 	if(!beers[type]){
+ 			return false;
+	} else {
+		if (typeof descriptions === "string"){			
+			return "This " + type + " is " + descriptions + ".";
+		} 
+		return "This " + type + " is " + descriptions[0] + " and " + descriptions[1] + ".";
+		
+	}
+}
 /* Step 23
  *
  * Define a function named "drink" that takes
@@ -279,6 +399,18 @@
  *
  */
 
+function browseURL (browser){
+	var URL = browsers[browser];
+	if(typeof browser !== "string") {
+		return false;
+	} else {
+		if (typeof URL === "string" ){
+			return URL;
+		}
+		return false;
+	}
+}
+
 
 /* Step 24
  *
@@ -293,6 +425,7 @@
  */
 
 
+
 /* Step 25
  *
  * Define a function named "listLivingOrgClass" that
@@ -300,9 +433,29 @@
  * living organism classifications as an list element(<li>)
  *
  * @return {String}
- *
- */
+ * 
+ */ 
 
+
+function listLivingOrgClass () {
+	var results = "<ul>";
+	for (var i = 0; i < livingOrganismClassification.length; i++) {
+		results += "<li>" + livingOrganismClassification[i] + "</li>"; 
+	}
+	results += "</ul>";
+	return results;
+}
+
+// //var planets = [
+// 	"Mercury", 
+// 	"Venus", 
+// 	"Earth", 
+// 	"Mars", 
+// 	"Jupiter", 
+// 	"Saturn", 
+// 	"Uranus", 
+// 	"Neptune"
+// 	];
 
 /* Step 26
  *
@@ -323,7 +476,17 @@
  * @return {String}
  *
  */
+function favoritePlanet (myplanet) {
 
+	for (var i = 0; i < planets.length; i++) {
+		if (planets[i] === myplanet) {
+			var randomPlanet = planets[Math.floor(Math.random() * 
+				planets.length)];
+			return "I'm from " + myplanet + ", but I wish I could go to " + randomPlanet + ".";
+		}
+	}
+		return myplanet + " is not a planet!";
+}
 
 /* Step 27
  *
@@ -347,6 +510,27 @@
  *   earnMoney
  *
  */
+Person = function (name, money, age, gender) {
+	this.name = name;
+	this.money = money;
+	this.age = age;
+	this.gender = gender;
+};
+
+Person.prototype.spendMoney = function (money) {
+	var spend = (this.money -= money);
+	return spend;
+};
+
+Person.prototype.earnMoney = function (money) {
+	var earn = (this.money += money);
+	return earn;
+};
+
+
+
+
+
 
 
 /* Step 28
@@ -361,6 +545,13 @@
  *
  */
 
+purchaseLaptop = function (laptop){
+	if(laptopCosts.hasOwnProperty(laptop)){
+		return laptopCosts[laptop].toString();
+	}else {
+		return -1;
+	}
+};
 
 /* Step 29
  *
@@ -373,7 +564,13 @@
  * @return {Bool}
  *
  */
-
+canTalkAbout = function (club) {
+	if(club === club_name){
+		return false;
+	}else {
+		return true;
+	}
+};
 
 /* Step 30
  *
@@ -395,7 +592,15 @@
  *   write
  *
  */
+Pen = function (color) {
+	this.color = color;
+};
 
+Pen.prototype.write = function(message) {
+	var response = this.color + ": " + message;
+	console.log(response);
+	return response;
+};
 
 /* Step 31
  *
@@ -423,7 +628,17 @@
  *   grow
  *
  */
+Garden = function (plantsTotal, isWatered){
+	this.plantsTotal = plantsTotal;
+};
 
+Garden.prototype.water = function() {
+	
+};
+
+Garden.prototype.grow = function() {
+	// body...
+};
 
 /* Step 32
  *
